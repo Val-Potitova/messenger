@@ -1,16 +1,54 @@
-# React + Vite
+# Messenger
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Пользовательский интерфейс для отправки текстовых сообщений в Telegram с использованием сервиса [GREEN-API](https://green-api.com/). Интерфейс реализован на JavaScript и React.
 
-Currently, two official plugins are available:
+## Что нужно установить
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Перед запуском нужны:
 
-## React Compiler
+- [Node.js](https://nodejs.org/) — вместе с ним установится npm
+- Git
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Проверить установку можно в терминале:
 
-## Expanding the ESLint configuration
+```bash
+node -v
+npm -v
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Запуск проекта
+
+1. Скачайте или клонируйте проект.
+2. Откройте терминал в папке проекта.
+3. Установите зависимости:
+
+```bash
+npm install
+```
+
+4. Запустите проект:
+
+```bash
+npm run dev
+```
+
+5. Откройте в браузере адрес, который покажет Vite в терминале. Обычно это:
+
+```text
+http://localhost:5173
+```
+
+## Авторизация
+
+При входе в приложение нужно указать:
+
+- **Идентификатор** (`idInstance`);
+- **Токен** (`apiTokenInstance`).
+
+Эти данные берутся из аккаунта Green-API.
+
+После успешной авторизации можно добавлять номер телефона и открывать чат.
+
+## Комментарии
+
+Отправка и получение сообщений происходит не мгновенно, поэтому нужно подождать. Не закрывайте окно чата в это время.
